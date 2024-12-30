@@ -36,12 +36,12 @@ public class MainPage {
         fillingTab.click();
     }
 
-    // нажатие на кнопку "Личный кабинет"
+    @Step("Нажатие на кнопку \"Личный кабинет\"")
     public void personalAccountLinkClick(){
         personalAccountLink.click();
     }
 
-    // нажатие на кнопку "Войти в аккаунт"
+    @Step("Нажатие на кнопку \"Личный кабинет\"")
     public void enterToAccountButtonClick(){
         enterToAccountButton.click();
     }

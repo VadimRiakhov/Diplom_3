@@ -1,14 +1,17 @@
 package model;
 
 import io.qameta.allure.Step;
-import org.apache.commons.lang3.RandomStringUtils;
+import net.datafaker.Faker;
 
 public class UserGeneratorData {
+
+    private static Faker faker = new Faker();
+
     @Step("Генерация рандомного пользователя")
     public static UserCreateData getRandomUser(){
-        String name = RandomStringUtils.randomAlphabetic(8);
-        String password = RandomStringUtils.randomAlphabetic(8);
-        String email = RandomStringUtils.randomAlphabetic(8)+"@yandex.ru";
+        String name = faker.name().firstName();
+        String password = faker.internet().password(6, 10, true);
+        String email = faker.internet().emailAddress();
         return new UserCreateData(name, password, email);
     }
 

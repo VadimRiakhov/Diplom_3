@@ -21,12 +21,12 @@ public class RegistrationPage {
     // локатор для надписи "Некорректный пароль"
     private final SelenideElement invalidPasswordError =  $x(".//p[text()='Некорректный пароль']");
 
-    // нажатие на кнопку "Войти"
+    @Step("Нажатие на кнопку \"Войти\"")
     public void enterButtonClick(){
         enterButton.click();
     }
 
-    // нажатие на кнопку "Зарегистрироваться"
+    // Нажатие на кнопку "Зарегистрироваться"
     public void registerButtonClick(){
         registerButton.shouldBe(visible).click();
     }

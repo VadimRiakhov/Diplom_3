@@ -42,7 +42,7 @@ public class LoginPage {
         enterButtonClick();
     }
 
-    // нажатие на кнопку "Личный кабинет"
+    @Step("Нажатие на кнопку \"Личный кабинет\"")
     public void personalAccountButtonClick(){
         personalAccountButton.click();
     }
